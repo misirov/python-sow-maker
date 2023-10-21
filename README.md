@@ -1,4 +1,4 @@
-# Python Google Sheets
+# Python SOW maker
 
 Interact with the Google Sheets API to fetch values from a spreadsheet.
 
