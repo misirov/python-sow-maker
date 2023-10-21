@@ -31,6 +31,7 @@ class Spreadsheet:
         return build('sheets', 'v4', credentials=creds)
 
     def fetch_data(self):
+        print("fetching data from spreadsheet...")
         try:
             sheet = self.service.spreadsheets()
             result = sheet.values().get(spreadsheetId=self.spreadsheet_id, range=self.range_name).execute()
