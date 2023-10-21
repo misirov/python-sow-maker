@@ -10,7 +10,6 @@ def main():
     spreadsheet = Spreadsheet(SPREADSHEET_ID, RANGE_NAME)
     # Retrieve values. Returns a list of lists
     data = spreadsheet.fetch_data()
-    print("This is the list containing the data in the spreadsheet\n\n", data)
     
     # Convert list of lists into a dictionary and format according to the docx placeholder template
     replacements = {}
@@ -22,7 +21,7 @@ def main():
                 replacements[key] = value
     formatted_replacements = {"{" + key + "}": value for key, value in replacements.items()}
     
-    print("\nThis is the created dictionary\n\n", formatted_replacements)
+    print("\nCreated dictionary to replace for placeholders\n\n", formatted_replacements)
 
     template_path = "templates/sow_template.docx"
     sow_filler = SOWFiller(template_path)

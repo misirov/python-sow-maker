@@ -37,7 +37,7 @@ class SOWFiller:
             # Save modified document
             if not os.path.exists("output"):
                 os.makedirs("output")
-            print("saving modified template in output/ ...")
+            print("\nSaving modified template in output/")
             doc.save("output/modified.docx")
 
         except Exception as e:
