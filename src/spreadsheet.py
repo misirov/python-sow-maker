@@ -36,6 +36,7 @@ class Spreadsheet:
             sheet = self.service.spreadsheets()
             result = sheet.values().get(spreadsheetId=self.spreadsheet_id, range=self.range_name).execute()
             values = result.get('values', [])
+            print(values)
             if not values:
                 print('No data found.')
                 return []
