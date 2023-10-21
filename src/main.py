@@ -1,7 +1,5 @@
 from sow_filler import SOWFiller
 from spreadsheet import Spreadsheet
-from datetime import datetime, timedelta
-
 
 def main():
     # Spreadsheet ID
