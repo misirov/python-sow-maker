@@ -27,8 +27,15 @@ pip install --upgrade requirements.txt
     - [x] authenticate
 - [x] Test basic functionality
     - [x] fetch values from spreadsheet
-- [ ] Populate SOW template
-    - [ ] Spreadsheet: create values used in SOW
-    - [ ] Create SOW template
-    - [ ] populate SOW
+- [x] Populate SOW template
+    - [x] spreadsheet: create values used in SOW
+    - [x] create SOW template
+    - [x] populate SOW
+- [ ] Create Templates
+    - [x] Cantina Managed
+    - [ ] Guild
+    - [ ] vCISO
 - [ ] Send populated SOW via Discord
+    - [ ] create command
+    - [ ] send document over discord
+    - [ ] deploy 
