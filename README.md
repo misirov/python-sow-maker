@@ -7,9 +7,9 @@ Interact with the Google Sheets API to fetch values from a spreadsheet.
 
 It is recommended to use this project in a virtual environment.
 ```python
-python -m venv python-sow-maker
-cd python-sow-maker
 git clone https://github.com/misirov/python-sow-maker
+cd python-sow-maker
+python -m venv .
 pip install --upgrade requirements.txt
 ```
 
