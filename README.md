@@ -33,7 +33,7 @@ pip install --upgrade requirements.txt
     - [x] populate SOW
 - [ ] Create Templates
     - [x] Cantina Managed
-    - [ ] Guild
+    - [x] Guild
     - [ ] vCISO
 - [ ] Send populated SOW via Discord
     - [ ] create command
