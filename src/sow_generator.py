@@ -178,16 +178,19 @@ class Spreadsheet:
             service: Authenticated service to make Google Sheets API calls.
         """
         creds = None
-        if os.path.exists('token.json'):
-            creds = Credentials.from_authorized_user_file('token.json', self.SCOPES)
-
+        credentials_path = "credentials/credentials.json"
+        token_path = "credentials/token.json"
+        
+        if os.path.exists(token_path):
+            creds = Credentials.from_authorized_user_file(token_path, self.SCOPES)
+        
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
                 creds.refresh(Request())
             else:
-                flow = InstalledAppFlow.from_client_secrets_file('credentials.json', self.SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file(credentials_path, self.SCOPES)
                 creds = flow.run_local_server(port=0)
-            with open('token.json', 'w') as token:
+            with open(token_path, 'w') as token:
                 token.write(creds.to_json())
         return build('sheets', 'v4', credentials=creds)
 
